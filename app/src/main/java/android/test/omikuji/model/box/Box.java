@@ -1,11 +1,19 @@
-package android.test.omikuji;
+package android.test.omikuji.model.box;
+
+import java.util.Random;
 
 /**
- * Created by ando on 2017/12/08.
+ * Created by Kohei on 1/2/18.
  */
 
+public class Box {
+    /**
+     * constructor
+     */
+    public Box (){
 
-public class Business {
+    }
+
     public enum Luck {
         DAIKICHI("大吉"),
         KICHI("吉"),
@@ -23,9 +31,7 @@ public class Business {
         }
     };
 
-    static String pick() {
-        return Luck.DAIKICHI.getVal();
-    };
-
-
+    public static String pick () {
+        return Luck.values()[new Random().nextInt(Luck.values().length)].getVal();
+    }
 }

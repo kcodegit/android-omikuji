@@ -1,8 +1,9 @@
-package android.test.omikuji;
+package android.test.omikuji.activity;
 
 import android.support.v7.app.AppCompatActivity;
 import android.os.Bundle;
-import android.test.omikuji.Business;
+import android.test.omikuji.model.box.Box;
+import android.test.omikuji.R;
 import android.widget.Button;
 import android.widget.TextView;
 import android.view.View.OnClickListener;
@@ -20,7 +21,7 @@ public class MainActivity extends AppCompatActivity {
 
         btn.setOnClickListener(new OnClickListener() {
             public void onClick(View v) {
-                String res = Business.pick();
+                String res = Box.pick();
                 msg.setText(res);
             }
         });
